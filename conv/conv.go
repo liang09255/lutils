@@ -38,7 +38,11 @@ func ToInt(v interface{}) int {
 		}
 		return 0
 	case string:
-		value, _ := strconv.ParseInt(t, 10, 64)
+		value, err := strconv.ParseInt(t, 10, 64)
+		if err != nil {
+			convLogger.Error("conv.ToInt error:", err)
+			return 0
+		}
 		return int(value)
 	}
 	return 0
@@ -76,7 +80,11 @@ func ToInt8(v interface{}) int8 {
 		}
 		return 0
 	case string:
-		value, _ := strconv.ParseInt(t, 10, 64)
+		value, err := strconv.ParseInt(t, 10, 64)
+		if err != nil {
+			convLogger.Error("conv.ToInt8 error:", err)
+			return 0
+		}
 		return int8(value)
 	}
 	return 0
@@ -114,7 +122,11 @@ func ToInt16(v interface{}) int16 {
 		}
 		return 0
 	case string:
-		value, _ := strconv.ParseInt(t, 10, 64)
+		value, err := strconv.ParseInt(t, 10, 64)
+		if err != nil {
+			convLogger.Error("conv.ToInt16 error:", err)
+			return 0
+		}
 		return int16(value)
 	}
 	return 0
@@ -152,7 +164,11 @@ func ToInt32(v interface{}) int32 {
 		}
 		return 0
 	case string:
-		value, _ := strconv.ParseInt(t, 10, 64)
+		value, err := strconv.ParseInt(t, 10, 64)
+		if err != nil {
+			convLogger.Error("conv.ToInt32 error:", err)
+			return 0
+		}
 		return int32(value)
 	}
 	return 0
@@ -190,7 +206,11 @@ func ToInt64(v interface{}) int64 {
 		}
 		return 0
 	case string:
-		value, _ := strconv.ParseInt(t, 10, 64)
+		value, err := strconv.ParseInt(t, 10, 64)
+		if err != nil {
+			convLogger.Error("conv.ToInt64 error:", err)
+			return 0
+		}
 		return value
 	}
 	return 0
@@ -228,7 +248,11 @@ func ToUint(v interface{}) uint {
 		}
 		return 0
 	case string:
-		value, _ := strconv.ParseUint(t, 10, 64)
+		value, err := strconv.ParseUint(t, 10, 64)
+		if err != nil {
+			convLogger.Error("conv.ToUint error:", err)
+			return 0
+		}
 		return uint(value)
 	}
 	return 0
@@ -266,7 +290,11 @@ func ToUint8(v interface{}) uint8 {
 		}
 		return 0
 	case string:
-		value, _ := strconv.ParseUint(t, 10, 64)
+		value, err := strconv.ParseUint(t, 10, 64)
+		if err != nil {
+			convLogger.Error("conv.ToUint8 error:", err)
+			return 0
+		}
 		return uint8(value)
 	}
 	return 0
@@ -304,7 +332,11 @@ func ToUint16(v interface{}) uint16 {
 		}
 		return 0
 	case string:
-		value, _ := strconv.ParseUint(t, 10, 64)
+		value, err := strconv.ParseUint(t, 10, 64)
+		if err != nil {
+			convLogger.Error("conv.ToUint16 error:", err)
+			return 0
+		}
 		return uint16(value)
 	}
 	return 0
@@ -342,7 +374,11 @@ func ToUint32(v interface{}) uint32 {
 		}
 		return 0
 	case string:
-		value, _ := strconv.ParseUint(t, 10, 64)
+		value, err := strconv.ParseUint(t, 10, 64)
+		if err != nil {
+			convLogger.Error("conv.ToUint32 error:", err)
+			return 0
+		}
 		return uint32(value)
 	}
 	return 0
@@ -380,7 +416,11 @@ func ToUint64(v interface{}) uint64 {
 		}
 		return 0
 	case string:
-		value, _ := strconv.ParseUint(t, 10, 64)
+		value, err := strconv.ParseUint(t, 10, 64)
+		if err != nil {
+			convLogger.Error("conv.ToUint64 error:", err)
+			return 0
+		}
 		return value
 	}
 	return 0
@@ -418,7 +458,11 @@ func ToFloat32(v interface{}) float32 {
 		}
 		return 0
 	case string:
-		value, _ := strconv.ParseFloat(t, 64)
+		value, err := strconv.ParseFloat(t, 64)
+		if err != nil {
+			convLogger.Error("conv.ToFloat32 error:", err)
+			return 0
+		}
 		return float32(value)
 	}
 	return 0
@@ -456,7 +500,11 @@ func ToFloat64(v interface{}) float64 {
 		}
 		return 0
 	case string:
-		value, _ := strconv.ParseFloat(t, 64)
+		value, err := strconv.ParseFloat(t, 64)
+		if err != nil {
+			convLogger.Error("conv.ToFloat64 error:", err)
+			return 0
+		}
 		return value
 	}
 	return 0
