@@ -27,8 +27,8 @@ func exampleDefault() {
 }
 
 func exampleConv() {
-	// If we sure that can convert without error, we can use conv to ignore error
-	// Error will be logged by default logger
+	// If we sure that can convert without error, we can use conv to ignore error.
+	// Error message will be logged by default logger
 	// If we need to use our own logger, we can use conv.WithLogger to set it
 	str := "1.0"
 	fmt.Println(conv.ToInt(str))     // 1 (int)
