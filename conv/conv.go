@@ -578,7 +578,12 @@ func ToBool(v interface{}) bool {
 	case bool:
 		return t
 	case string:
-		return t != ""
+		value, err := strconv.ParseBool(t)
+		if err != nil {
+			convLogger.Error("conv.ToBool error:", err)
+			return false
+		}
+		return value
 	}
 	return false
 }
