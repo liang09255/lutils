@@ -34,7 +34,7 @@ This package can convert the type of a variable to another type.
 
 Example:
 
-```
+```GO
 go get github.com/liang09255/lutils/conv
 ```
 
