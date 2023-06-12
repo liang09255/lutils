@@ -34,7 +34,6 @@ func exampleConv() {
 	fmt.Println(conv.ToInt(str))     // 1 (int)
 	fmt.Println(conv.ToUint(str))    // 1 (uint)
 	fmt.Println(conv.ToFloat64(str)) // 1 (float64)
-	fmt.Println(conv.ToString(str))  // "1.0" (string)
 	str = "true"
 	fmt.Println(conv.ToBool(str)) // true (bool)
 }

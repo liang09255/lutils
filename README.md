@@ -43,7 +43,6 @@ str := "1.0"
 conv.ToInt(str)     // 1 (int)
 conv.ToUint(str)    // 1 (uint)
 conv.ToFloat64(str) // 1 (float64)
-conv.ToString(str)  // "1.0" (string)
 str = "true"
 conv.ToBool(str) 	// true (bool)
 ```
