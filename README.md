@@ -49,7 +49,7 @@ conv.ToBool(str) 	// true (bool)
 
 ```go
 // use logger
-conv.WithLogger(Logger)
+conv.SetLogger(Logger)
 // 	logger need to implement interface Logger
 // 	type Logger interface {
 // 		Info(args ...interface{})

@@ -2,6 +2,8 @@ package conv
 
 import "log"
 
+// TODO adapter zap/logrus/zerolog/...
+
 type Logger interface {
 	Info(args ...interface{})
 	Warn(args ...interface{})
@@ -15,7 +17,7 @@ var _ Logger = (*defaultLogger)(nil)
 
 var convLogger = Logger(&defaultLogger{})
 
-func WithLogger(l Logger) {
+func SetLogger(l Logger) {
 	convLogger = l
 }
 
