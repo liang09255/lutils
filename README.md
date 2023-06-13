@@ -14,10 +14,6 @@ This package can safely load pointer values and replace empty pointers with defa
 Example:
 
 ```go
-go get github.com/liang09255/lutils/dfo
-```
-
-```go
 nums1, nums2 := 1, 1
 	addTwoNum := func(a *int, b *int) int {
 		// This is a service which can add two numbers
@@ -33,10 +29,6 @@ addTwoNum(&nums1, &nums2) // 2
 This package can convert the type of a variable to another type.
 
 Example:
-
-```GO
-go get github.com/liang09255/lutils/conv
-```
 
 ```go
 str := "1.0"
