@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"lutils/conv"
-	"lutils/dfo"
+	"github.com/liang09255/lutils/conv"
+	"github.com/liang09255/lutils/dfo"
 )
 
 func main() {
