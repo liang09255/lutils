@@ -10,8 +10,8 @@ replace (
 )
 
 require (
-	github.com/liang09255/lutils/conv latest
-	github.com/liang09255/lutils/dfo latest
+	github.com/liang09255/lutils/conv v0.0.0
+	github.com/liang09255/lutils/dfo v0.0.0
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
