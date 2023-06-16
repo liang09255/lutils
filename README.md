@@ -2,14 +2,14 @@
 
 Some commonly used tools in development
 
-```go
-go get github.com/liang09255/lutils
-```
-
 ## dfo
 The name "dfo" is derived from the homophonic sound of "default".
 
 This package can safely load pointer values and replace empty pointers with default values.
+
+```go
+go get -u  github.com/liang09255/lutils/dfo
+```
 
 Example:
 
@@ -27,6 +27,10 @@ addTwoNum(&nums1, &nums2) // 2
 
 ## conv
 This package can convert the type of a variable to another type.
+
+```go
+go get -u  github.com/liang09255/lutils/conv
+```
 
 Example:
 
