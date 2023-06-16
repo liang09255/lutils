@@ -5,8 +5,7 @@ go 1.20
 require github.com/stretchr/testify v1.8.4
 
 replace (
-	github.com/liang09255/lutils/conv => ./conv
-	github.com/liang09255/lutils/dfo => ./dfo
+	github.com/liang09255/lutils => ./
 )
 
 require (
