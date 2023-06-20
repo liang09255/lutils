@@ -1,6 +1,7 @@
 package conv
 
 import (
+	"encoding/json"
 	"strconv"
 )
 
@@ -586,4 +587,13 @@ func ToBool(v interface{}) bool {
 		return value
 	}
 	return false
+}
+
+func ToJSON(v interface{}) string {
+	marshal, err := json.Marshal(v)
+	if err != nil {
+		convLogger.Error("conv.ToJSON error:", err)
+		return ""
+	}
+	return string(marshal)
 }
