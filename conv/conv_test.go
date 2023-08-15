@@ -2,6 +2,7 @@ package conv
 
 import (
 	"github.com/stretchr/testify/assert"
+	"log"
 	"testing"
 )
 
@@ -53,4 +54,36 @@ func TestToString(t *testing.T) {
 	assert.Equal(t, stringOneNum, ToString(float64OneNum))
 	assert.Equal(t, stringTrueFlag, ToString(boolTrueFlag))
 	assert.Equal(t, stringFalseFlag, ToString(boolFalseFlag))
+}
+
+func TestToJSON(t *testing.T) {
+	assert.Equal(t, `{"a":"b"}`, ToJSON(map[string]string{"a": "b"}))
+	assert.Equal(t, `{"a":"b"}`, ToJSON(struct {
+		A string `json:"a"`
+	}{A: "b"}))
+}
+
+func TestArray2Map(t *testing.T) {
+	arr := []string{"a", "b", "c"}
+	m := ArrayToMap(arr)
+	log.Printf("%+v", m)
+	assert.Equal(t, 3, len(m))
+	_, okA := m["a"]
+	_, okB := m["b"]
+	_, okC := m["c"]
+	_, okD := m["d"]
+	assert.True(t, okA)
+	assert.True(t, okB)
+	assert.True(t, okC)
+	assert.False(t, okD)
+}
+
+func TestArrayToBoolMap(t *testing.T) {
+	arr := []string{"a", "b", "c"}
+	m := ArrayToBoolMap(arr)
+	assert.Equal(t, 3, len(m))
+	assert.True(t, m["a"])
+	assert.True(t, m["b"])
+	assert.True(t, m["c"])
+	assert.False(t, m["d"])
 }

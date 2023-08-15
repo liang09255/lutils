@@ -597,3 +597,19 @@ func ToJSON(v interface{}) string {
 	}
 	return string(marshal)
 }
+
+func ArrayToMap[T comparable](array []T) map[T]struct{} {
+	m := make(map[T]struct{}, len(array))
+	for _, v := range array {
+		m[v] = struct{}{}
+	}
+	return m
+}
+
+func ArrayToBoolMap[T comparable](array []T) map[T]bool {
+	m := make(map[T]bool, len(array))
+	for _, v := range array {
+		m[v] = true
+	}
+	return m
+}
